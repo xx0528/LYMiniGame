@@ -11,9 +11,9 @@
     GameConfig.width = 640;
     GameConfig.height = 1136;
     GameConfig.scaleMode = "fixedwidth";
-    GameConfig.screenMode = "none";
-    GameConfig.alignV = "top";
-    GameConfig.alignH = "left";
+    GameConfig.screenMode = "vertical";
+    GameConfig.alignV = "middle";
+    GameConfig.alignH = "center";
     GameConfig.startScene = "";
     GameConfig.sceneRoot = "";
     GameConfig.debug = false;
@@ -48,9 +48,11 @@
             Laya.AtlasInfoManager.enable("fileconfig.json", Laya.Handler.create(this, this.onConfigLoaded));
         }
         onConfigLoaded() {
+            console.log(Laya.stage);
             GameConfig.startScene && Laya.Scene.open(GameConfig.startScene);
         }
     }
     new Main();
 
 }());
+//# sourceMappingURL=bundle.js.map

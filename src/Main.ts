@@ -30,6 +30,7 @@ class Main {
 
 	onConfigLoaded(): void {
 		//加载IDE指定的场景
+		console.log(Laya.stage);
 		GameConfig.startScene && Laya.Scene.open(GameConfig.startScene);
 	}
 }
